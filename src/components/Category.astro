@@ -1,0 +1,44 @@
+---
+interface Props {
+    name: string;
+}
+
+const { name } = Astro.props;
+---
+
+<div class="category">
+    <span class="name">~/{name}</span>
+    <ul class="list">
+        <slot />
+    </ul>
+</div>
+
+<style>
+    .category {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .list {
+        margin-left: 1em;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .category:nth-child(2) {
+        align-self: flex-end;
+    }
+
+    .name {
+        color: var(--color-primary);
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .name::selection {
+        color: var(--color-bg);
+        background-color: var(--color-primary);
+    }
+</style>

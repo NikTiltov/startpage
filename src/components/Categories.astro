@@ -1,0 +1,34 @@
+---
+import Category from "./Category.astro";
+import Element from "./Element.astro";
+---
+
+<div class="categories">
+    <Category name="social">
+        <Element href="https://www.youtube.com/">youtube</Element>
+        <Element href="https://vk.com/id390494125">vkontakte</Element>
+        <Element href="https://www.youtube.com/">telegram</Element>
+        <Element href="https://www.youtube.com/">twitter</Element>
+    </Category>
+    <Category name="general">
+        <Element href="https://www.youtube.com/">github</Element>
+        <Element href="https://www.youtube.com/">notion</Element>
+        <Element href="https://www.youtube.com/">pinterest</Element>
+        <Element href="https://www.youtube.com/">trello</Element>
+    </Category>
+    <Category name="utils">
+        <Element href="https://www.youtube.com/">lospec</Element>
+        <Element href="https://www.youtube.com/">aternos</Element>
+        <Element href="https://www.youtube.com/">pastebin</Element>
+    </Category>
+</div>
+
+<style>
+    .categories {
+        height: 100%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+</style>
